@@ -1,0 +1,726 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+    color: #454545;
+    background-color: #fffcf2;
+}
+
+/* Header navigation */
+.header-nav {
+    position: fixed; /* Fix the navigation bar position */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Set a higher z-index to keep the navigation bar on top */
+    background-color: #7371CB;
+}
+
+/* Container styles */
+.container {
+    padding: 10px 10%; /* Add padding to the container */
+}
+
+/* Navigation styles */
+nav {
+    display: flex; /* Use flexbox for the navigation */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow navigation items to wrap to the next line */
+}
+
+/* Logo styles */
+.logo {
+    width: 140px; /* Set a specific width for the logo */
+}
+
+/* Navigation list item styles */
+nav ul li {
+    display: inline-block; /* Display list items inline */
+    list-style: none;
+    margin: 10px 20px; /* Add margin around each list item */
+}
+
+/* Navigation link styles */
+nav ul li a {
+    color: #EBDAD7; /* Set the link color */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* Set the position of the link relative to its parent */
+}
+
+/* Navigation link hover effect */
+nav ul li a::after {
+    content: ''; /* Add content to the pseudo-element */
+    width: 0;
+    height: 3px;
+    background: #50CAAD; /* Set the background color of the hover effect */
+    position: absolute; /* Position the pseudo-element absolutely */
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /* Add a transition effect for smooth animation */
+}
+
+
+/* Navigation link hover effect */
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline */
+}
+
+/* Header text styles */
+.header-text {
+    color: #fffcf2; /* Text color */
+    font-size: 60px; /* Font size */
+    text-align: center; /* Center align text */
+    text-transform: uppercase; /* Uppercase text */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Vertically center align */
+    align-items: center; /* Center align horizontally */
+    width: 100%; /* Take full width */
+    height: 100vh; /* Take full viewport height */
+}
+
+/* Background image styles */
+.background-image {
+    background-image: url(images/background.png); /* Set background image */
+    background-size: cover; /* Scale image to cover container */
+    background-position: center; /* Center align image */
+    background-attachment: fixed; /* Fix background image */
+    opacity: 0; /* Initially hidden */
+}
+
+/* Video styles */
+#myVideo {
+    position: fixed; /* Fix video position */
+    right: 0; /* Align video to right */
+    bottom: 0; /* Align video to bottom */
+    max-width: 100%; /* Limit video width to container */
+}
+
+/* Full name styles */
+.header-text #fullname {
+    font-size: 100px; /* Font size */
+    margin-top: 20px; /* Top margin */
+    margin-left: 60px; /* Left margin */
+    text-transform: none; /* Reset text transform */
+}
+
+/* Span styles */
+.header-text span {
+    color: #C66791; /* Text color */
+}
+
+/* Logo styles */
+#logo {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 30px; /* Font size */
+}
+
+#logo span {
+    color: #EB6408; /* Text color */
+}
+
+/* About section styles */
+#about {
+    padding: 80px 0; /* Top and bottom padding */
+}
+
+/* About row styles */
+.row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Spread columns evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* About column 1 styles */
+.about-col-1 {
+    flex-basis: 35%; /* Set column width */
+}
+
+.about-col-1 img {
+    width: 100%; /* Set image width to fill column */
+    border-radius: 15px; /* Add border radius */
+    margin-top: 5%; /* Top margin */
+}
+
+/* About column 2 styles */
+.about-col-2 {
+    flex-basis: 60%; /* Set column width */
+    font-size: 18px; /* Font size */
+}
+
+.about-col-2 li {
+    opacity: 1; /* Initially hidden */
+    transform: translateY(50px); /* Move element down */
+    padding-top: 10px; /* Top padding */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Add transition effects */
+}
+
+.about-col-2 li.show {
+    opacity: 1; /* Show element */
+    transform: translateY(0); /* Reset transformation */
+}
+
+.about-col-2 li:before {
+    content: ""; /* Add content */
+    position: absolute; /* Position element */
+    top: 1.2em; /* Position from top */
+    left: -30px; /* Position from left */
+    margin-top: -0.9em; /* Adjust vertical alignment */
+    background: #f69ec4; /* Background color */
+    height: 12px; /* Height of the element */
+    width: 12px; /* Width of the element */
+    border-radius: 50%; /* Create a circular shape with border-radius */
+}
+
+/* Subtitle styles */
+.sub-title {
+    font-size: 60px; /* Font size */
+    font-weight: 600; /* Font weight */
+    margin-top: 5%; /* Top margin */
+}
+
+
+#contactme {
+    margin-top: auto; /* Set margin-top to auto to push the element to the bottom */
+}
+
+.tab-titles {
+    display: flex; /* Use flexbox for the tab titles */
+    margin: 20px 0 40px; /* Set margin around the tab titles */
+    min-width: 100%;
+    flex: 1;
+}
+
+.tab-links {
+    margin-right: 50px; /* Add margin to the right of each tab link */
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px solid;
+    border-bottom-color: #7371CB; /* Set the color of the border bottom */
+    transition: all 0.2s ease-in-out; /* Add a transition effect for smooth animation */
+}
+
+.tab-links.active-link {
+    border: 2px solid #7371CB; /* Set a thicker border for the active link */
+}
+
+.tab-links:hover {
+    border-color: #50CAAD; /* Change the border color on hover */
+}
+
+.tab-contents {
+    display: none; /* Hide the tab contents by default */
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #50CAAD; /* Add a bottom border to the tab contents */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Display the active tab content */
+}
+
+/* Interests section */
+#interests {
+    padding: 30px 0; /* Add padding to the interests section */
+}
+
+.interests-list {
+    display: grid; /* Use grid layout for the interests list */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create a responsive grid with minimum width of 250px */
+    grid-gap: 40px; /* Set the gap between grid items */
+    margin-top: 50px;
+}
+
+.interests-list div {
+    display: flex; /* Use flexbox for each interest item */
+    flex-direction: column;
+    align-items: center;
+    background: #262626; /* Set the background color */
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; /* Add transitions for background and transform properties */
+    justify-content: center;
+    color: #fffcf2; /* Set the text color */
+}
+
+.interests-list div i {
+    font-size: 30px; /* Set the size of the icon */
+    margin-bottom: 30px;
+    color: #fffcf2; /* Set the icon color */
+}
+
+.interests-list div h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #7371CB; /* Set the color of the heading */
+}
+
+.interests-list div a {
+    text-decoration: none;
+    color: #7371CB; /* Set the color of the link */
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.interests-list div:hover {
+    background: #50CAAD; /* Change the background color on hover */
+    transform: translateY(-10px); /* Apply a vertical translation on hover */
+}
+
+/* Portfolio section */
+#portfolio {
+    padding: 50px 0; /* Add padding to the portfolio section */
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: #fffcf2; /* Set the text color */
+    font-size: 20px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* Apply a transition to the image transformation */
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #6A9CFF);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 20px;
+    transition: height 0.5s; /* Apply a transition to the height property */
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #6A9CFF; /* Set the color of the heading */
+    font-weight: bold;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #FEA380; /* Set the color of the link */
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #7371CB; /* Set the background color of the link */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.work:hover .layer {
+    height: 100%; /* Expand the layer on hover */
+}
+
+.extra-project {
+    display: none; /* Hide the extra-project class by default */
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    padding: 14px 50px;
+    text-decoration: none;
+    border: 2px solid #7371CB;
+    border-radius: 6px;
+    background: #fffcf2;
+    color: #262626;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: #7371CB;
+    color: #fffcf2;
+}
+
+/* ---------contact-------- */
+
+.contact-left {
+    flex-basis: 35%; /* Set the flex basis for the contact-left section */
+}
+
+.contact-right {
+    flex-basis: 60%; /* Set the flex basis for the contact-right section */
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #FEA380; /* Set the color for the icon in contact-left */
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #FEA380; /* Change the color of social icons on hover */
+    transform: translateY(-5px); /* Move the social icons slightly up on hover */
+}
+
+.btn.btn2 {
+    display: inline-block;
+    border: 2px solid #7371CB;
+    background: #fffcf2;
+    color: #262626;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #fffcf2;
+    padding: 15px;
+    margin: 15px 0;
+    color: #7371CB;
+    font-size: 20px;
+    border: 2px solid #7371CB;
+    border-radius: 6px;
+    color: #262626;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn.btn2:hover {
+    background: #7371CB;
+    color: #fffcf2;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #fffcf2;
+}
+
+.footer i {
+    color: #FEA380; /* Set the color for the icon in the footer */
+}
+
+.footer a {
+    color: #FEA380;
+    text-decoration: none;
+}
+
+/* -----------------css for small screens--------- */
+nav .fas {
+    display: none; /* Hide the 'fas' class within 'nav' for small screens */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles for screens with maximum width of 768px */
+
+    /* #myVideo{
+        opacity: 0;
+    } */
+    /* Uncomment the above code if necessary */
+
+    #logo {
+        font-size: 16px; /* Reduce font size of #logo */
+    }
+
+    #myVideo {
+        display: none; /* Hide #myVideo element */
+    }
+
+    .background-image {
+        background-image: url(images/phone-background.png); /* Set a different background image for .background-image */
+    }
+
+    .header-text {
+        font-size: 16px; /* Reduce font size of .header-text */
+    }
+
+    .header-text #fullname {
+        font-size: 18px; /* Increase font size of #fullname within .header-text */
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px; /* Display and adjust font size of .fas within nav */
+    }
+
+    .layer {
+        font-size: 14px; /* Reduce font size of .layer */
+    }
+
+    nav ul {
+        background: #6A9CFF;
+        position: fixed;
+        color: #262626;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s; /* Transition effect for right property */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px; /* Adjust margin of nav ul li */
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer; /* Set cursor to pointer for .fas within nav ul */
+    }
+
+    .sub-title {
+        font-size: 32px;
+        margin-top: 15%; /* Adjust margin-top of .sub-title */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%; /* Set flex-basis to 100% for .about-col-1 and .about-col-2 */
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px; /* Adjust margin-bottom of .about-col-1 */
+    }
+
+    .about-col-2 {
+        font-size: 18px; /* Adjust font size of .about-col-2 */
+    }
+
+    .tab-links {
+        font-size: 14px; /* Adjust font size of .tab-links */
+        margin-right: 20px;
+        flex: auto;
+        margin-left: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%; /* Set flex-basis to 100% for .contact-left and .contact-right */
+    }
+
+    .footer {
+        font-size: 14px; /* Adjust font size of .footer */
+    }
+}
+    
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for screens with minimum width of 769px and maximum width of 1024px */
+
+    .background-image {
+        background-image: url(images/tablet-background.png); /* Set a different background image for .background-image */
+    }
+
+    .header-text {
+        font-size: 16px; /* Reduce font size of .header-text */
+    }
+
+    #fullname {
+        font-size: 18px;
+        justify-content: center; /* Adjust alignment of #fullname */
+    }    
+
+    #msg {
+        color: #61b752;
+        margin-top: -40px;
+        display: block; /* Adjust color, margin, and display of #msg */
+    }
+}
+
+.education-section,
+.experience-section {
+    margin-bottom: 40px; /* Add margin at the bottom of education and experience sections */
+    padding-top: 10px; /* Add padding at the top of education and experience sections */
+}
+
+.education-list,
+.experience-section {
+    list-style: none; /* Remove the default list styles for education and experience sections */
+    padding: 0; /* Remove any default padding for education and experience sections */
+}
+
+.education-list li {
+    margin-bottom: 20px; /* Add margin at the bottom of each list item in education section */
+    line-height: 2; /* Set the line height for each list item in education section */
+}
+
+.experience-list li {
+    margin-bottom: 20px; /* Add margin at the bottom of each list item in experience section */
+    line-height: 2; /* Set the line height for each list item in experience section */
+}
+
+.experience-list li::marker {
+    color: transparent; /* Make the marker (bullet point) in experience list transparent */
+}
+
+.education-list li::marker {
+    color: transparent; /* Make the marker (bullet point) in education list transparent */
+}
+
+.education-list li:not(:last-child),
+.experience-list li:not(:last-child) {
+    border-bottom: 1px solid #50CAAD; /* Add a bottom border to each list item in education and experience sections except the last item */
+    padding-bottom: 10px; /* Add padding at the bottom of each list item in education and experience sections except the last item */
+}
+
+.education-period {
+    font-weight: bold;
+    color: #6A9CFF; /* Set the font color for education period */
+    display: block;
+    font-size: 24px; /* Set the font size for education period */
+}
+
+.experience-period {
+    font-weight: bold;
+    color: #6A9CFF; /* Set the font color for experience period */
+    display: block;
+    font-size: 24px; /* Set the font size for experience period */
+}
+
+.institution-name {
+    font-weight: bold;
+    font-size: 22px; /* Set the font size for institution name */
+    margin-bottom: 5px; /* Add margin at the bottom of institution name */
+}
+
+.institution-link {
+    color: #6A9CFF; /* Set the color for institution link */
+    text-decoration: none; /* Remove the default text decoration for institution link */
+}
+
+.institution-link:hover {
+    text-decoration: underline; /* Add underline on hover for institution link */
+}
+
+.education-list .experience-list li::before {
+    content: ''; /* Add a bullet point for each list item in education and experience sections */
+    display: block;
+    width: 10px; /* Set the width of the bullet point */
+    height: 10px; /* Set the height of the bullet point */
+    background-color: #50CAAD; /* Set the background color of the bullet point */
+    border-radius: 50%; /* Make the bullet point circular */
+    position: absolute;
+    left: -20px; /* Position the bullet point to the left of the list item */
+    top: 6px; /* Position the bullet point vertically in the middle */
+}
+
+@media (max-width: 768px) {
+    .education-period {
+        display: inline; /* Change the display of education period to inline */
+        margin-right: 10px; /* Add margin to the right of education period */
+    }
+
+    .education-list li::before {
+        display: none; /* Hide*/
+    }
+}
+
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px; /* Add margin above the table */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7371CB; /* Add a border bottom to table rows */
+}
+
+th {
+    /* background-color: #6A9CFF; Set background color for table header cells */
+    background-color: #7371CB;
+    color: #fffcf2; /* Set text color for table header cells */
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5; /* Set background color for even rows */
+}
+
+/* Adjust table cell padding for small screens */
+@media only screen and (max-width: 768px) {
+    th, td {
+        padding: 8px;
+    }
+}
